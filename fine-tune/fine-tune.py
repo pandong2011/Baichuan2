@@ -1,6 +1,3 @@
-import os
-import math
-import pathlib
 from typing import Optional, Dict
 from dataclasses import dataclass, field
 import json
@@ -40,12 +37,12 @@ class SupervisedDataset(Dataset):
     """Dataset for supervised fine-tuning."""
 
     def __init__(
-        self,
-        data_path,
-        tokenizer,
-        model_max_length,
-        user_tokens=[195],
-        assistant_tokens=[196],
+            self,
+            data_path,
+            tokenizer,
+            model_max_length,
+            user_tokens=[195],
+            assistant_tokens=[196],
     ):
         super(SupervisedDataset, self).__init__()
         self.data = json.load(open(data_path))
@@ -89,7 +86,7 @@ class SupervisedDataset(Dataset):
         input_ids = input_ids[: self.model_max_length]
         labels = labels[: self.model_max_length]
         input_ids += [self.tokenizer.pad_token_id] * (
-            self.model_max_length - len(input_ids)
+                self.model_max_length - len(input_ids)
         )
         labels += [self.ignore_index] * (self.model_max_length - len(labels))
         input_ids = torch.LongTensor(input_ids)

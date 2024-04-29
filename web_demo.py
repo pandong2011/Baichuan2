@@ -4,7 +4,6 @@ import streamlit as st
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation.utils import GenerationConfig
 
-
 st.set_page_config(page_title="Baichuan 2")
 st.title("Baichuan 2")
 
