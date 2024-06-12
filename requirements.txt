@@ -1,17 +1,16 @@
 accelerate==0.21.0
 colorama
-bitsandbytes==0.39.0
+bitsandbytes==0.41.0
 sentencepiece
 streamlit
 transformers_stream_generator
 scipy
 flask
 peft==0.4.0
-
 deepspeed==0.9.5
 numpy==1.23.5
-sentencepiece==0.1.97
-torch==2.3.0
+torch==2.0.0
 transformers==4.29.2
-xformers==0.0.20
 datasets
+modelscope
+# xformers==0.0.19
